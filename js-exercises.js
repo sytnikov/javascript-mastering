@@ -14,3 +14,11 @@ const truncate = (text, length) => {
     return str;
   };
   
+  // Guess a number function (if condition)
+  const guessNumber = (number) => {
+    if (number === 42) {
+      return 'You win!';
+    }
+    
+    return 'Try again!';
+  }
