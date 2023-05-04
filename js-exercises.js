@@ -14,11 +14,26 @@ const truncate = (text, length) => {
     return str;
   };
   
-  // Guess a number function (if condition)
-  const guessNumber = (number) => {
+// Guess a number function (if condition)
+function guessNumber(number) {
     if (number === 42) {
-      return 'You win!';
+        return 'You win!';
     }
-    
+
     return 'Try again!';
+}
+
+// else if conditions
+const whoIsThisHouseToStarks = (name) => {
+    let result;
+    
+    if (name === 'Karstark' || name === 'Tally') {
+      result = 'friend';
+    } else if (name === 'Lannister' || name === 'Frey') {
+      result = 'enemy';
+    } else {
+      result = 'neutral';
+    }
+  
+    return result;
   }
