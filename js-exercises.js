@@ -106,3 +106,25 @@ const userName = "Dwain Jonson \"The Rock\"";
 console.log(userName);
 
 // Boolean: true and false
+
+//Data conversion
+let num = String(6);  // number to string
+let str = Number("123");    // string to number
+let bool1 = Boolean(7) // true for all the numbers except 0
+let bool2 = Boolean(0) // false
+let parser = parseInt("123 Alexey 23")
+
+// Data coercion
+let x = 8; // number
+result = x + "number"; // convert result into string 8number
+console.log(result, typeof result)
+
+let y = "7";
+result = y - 3; // convert result into a number 4
+console.log(result, typeof result)
+// Falsy and truthy values
+
+// Falsy value: null, undefined
+// Thruthy values: objects, functions, strings
+
+console.log(parser)
