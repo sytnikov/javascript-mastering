@@ -51,5 +51,58 @@ const getNumberExplanation = (number) => {
       default:
         return 'just a number';
     }
-    
+
   }
+
+// while cycle
+const printNumbers = (initialNumber) => {
+    let i = initialNumber;
+    while (i > 0) {
+      console.log(i);
+      i = i - 1;
+    }
+    console.log('finished!');
+  };
+
+//function that takes a string and returns the string with every n element being capital
+const makeItFunny = (str, n) => {
+    let i = 0;
+    let result = '';
+  
+    while (i < str.length) {
+      if ((i + 1) % n === 0) {
+        result = `${result}${str[i].toUpperCase()}`;
+      } else {
+        result = `${result}${str[i]}`;
+      }
+      i++;
+    }
+    return result
+  }
+
+  // encryption function: two next characters are swaped
+  const encrypt = (str) => {
+    let result = '';
+    for (let i = 0; i < str.length; i += 2) {
+      const nextSymbol = str[i + 1] || '';
+      result = `${result}${nextSymbol}${str[i]}`;
+    }
+  
+    return result;
+  };
+
+// Data types in JS: primitive and objects
+// Primitive: number, string, boolean, null, undefined, symbol
+
+// Numbers: calculations, BigInt, floating point, NaN - not a number (can appear when you make operations with numbers and strings)
+// Hex decimals: 0xf; exponential 1.5e12 -> 1.5 times 10 in the power of 12, Infinity,
+// big n -> put n in the end of the big number not to lose data
+
+// Strings: 
+// escape characters
+const userName = "Dwain Jonson \"The Rock\"";
+
+// \n - new line
+console.log(userName);
+
+// Boolean: true and false
