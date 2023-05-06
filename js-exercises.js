@@ -209,10 +209,10 @@ for (let i = 0; i < 5; i++) {
 }
 
 // objects
-// objects has properties represented by keys and values
+// objects has properties represented by key-value pairs
 let alien = {
-    name: "Alexey",
-    tech: "JS"
+    name : "Alexey",
+    tech : "JS"
 }
 console.log(alien, typeof alien);
 console.log(alien.name);
@@ -225,6 +225,27 @@ console.log(alien['tech']);
 let input = 'name';
 console.log(alien[input]); // console.log(alien.input) wouldn't work
 
+// complex object, an object inside an object
 
+let alienComplex = {
+    name : 'Alexey',
+    tech : 'JS',
+    laptop : {
+        cpu : 'i7',
+        ram : 4,
+        brand : 'Apple',
+    }
+}
 
+console.log(alienComplex);
 
+// ? symbol to use when you're not sure if the property or an object exists
+
+console.log(alienComplex?.laptop?.brand?.length);
+
+// delete a property
+
+delete alienComplex.laptop;
+
+console.log(alienComplex);
+console.log(alienComplex?.laptop?.brand?.length);
