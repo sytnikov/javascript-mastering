@@ -121,10 +121,48 @@ console.log(result, typeof result)
 
 let y = "7";
 result = y - 3; // convert result into a number 4
-console.log(result, typeof result)
+console.log(result, typeof result);
 // Falsy and truthy values
 
-// Falsy value: null, undefined
+// Falsy value: null, undefined, empty string ''
 // Thruthy values: objects, functions, strings
 
-console.log(parser)
+console.log(parser);
+console.log();
+
+// if else statements
+let num1 = 6;
+let num2 = 4;
+let num3 = 7;
+
+if (num1 > num2) {
+    console.log("Number 1 is greater than number 2");
+}
+
+console.log("Bye...");
+
+let num4 = 15;
+
+(num4 % 2 === 0) ? console.log("The number is even") : console.log("The number is odd");
+
+// switch statement
+
+let day = "Monday";
+
+switch (day) {
+    case "Monday":
+    case "Tuesday":
+    case "Wednesday":
+        console.log("4am");
+        break;
+    case "Thirsday":
+    case "Friday":
+        console.log("6am");
+        break;
+    case "Saturday":
+    case "Sunday":
+        console.log("9am");
+        break;
+    default:
+        console.log("Enter a valid day!");
+}
