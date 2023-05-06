@@ -181,3 +181,50 @@ console.log(`
 My name is
 Alexey Sytnikov`);
 
+// while loop: initial value, condition, increment
+// best if you know where to stop
+
+let i = 0;
+while (i < 5) {
+    console.log("Hi!");
+    i++;
+}
+
+// do while loop: execute the block at least once
+
+i = 0;
+do {
+    console.log("Hi!", i);
+    i++;
+} while (i < 5)
+
+// for loop, nested loop
+// best if you know start and finish points
+
+for (let i = 0; i < 5; i++) {
+    console.log("Hi", i);
+        for (let j = 0; j < 3; j++) {
+            console.log("Hello", j);
+        }
+}
+
+// objects
+// objects has properties represented by keys and values
+let alien = {
+    name: "Alexey",
+    tech: "JS"
+}
+console.log(alien, typeof alien);
+console.log(alien.name);
+console.log(alien.tech);
+
+// another way to fetch a property -> useful when there's a user's input
+console.log(alien['name']);
+console.log(alien['tech']);
+
+let input = 'name';
+console.log(alien[input]); // console.log(alien.input) wouldn't work
+
+
+
+
