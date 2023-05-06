@@ -164,5 +164,20 @@ switch (day) {
         console.log("9am");
         break;
     default:
-        console.log("Enter a valid day!");
+        console.log("Enter a valid day!");    
 }
+
+// Template Literal
+// `` - backtick symbol
+// ${variable}
+
+num1 = 9;
+num2 = 4;
+result = num1 + num2;
+
+console.log(`The sum of ${num1} and ${num2} is ${result}`);
+
+console.log(`
+My name is
+Alexey Sytnikov`);
+
