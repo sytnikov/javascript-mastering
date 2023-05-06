@@ -247,5 +247,33 @@ console.log(alienComplex?.laptop?.brand?.length);
 
 delete alienComplex.laptop;
 
-console.log(alienComplex);
-console.log(alienComplex?.laptop?.brand?.length);
+console.log(alienComplex); // { name: 'Alexey', tech: 'JS' }
+console.log(alienComplex?.laptop?.brand?.length); // undefined
+
+// for in loop -> iterate thorugh the object
+let alien1 = {
+    name : 'Alexey',
+    tech : 'JS',
+    laptop : {
+        cpu : 'i7',
+        ram : 4,
+        brand : 'Apple',
+    }
+}
+
+console.log(alien1);
+
+// fetching keys
+for (let key in alien1) {
+    console.log(key);
+}
+
+// fetching keys and correponding values
+for (let key in alien1) {
+    console.log(key, alien1[key]);
+}
+
+// fetching keys and correponding values of the laptop object
+for (let key in alien1.laptop) {
+    console.log(key, alien1.laptop[key]);
+}
