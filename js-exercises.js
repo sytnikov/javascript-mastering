@@ -277,3 +277,39 @@ for (let key in alien1) {
 for (let key in alien1.laptop) {
     console.log(key, alien1.laptop[key]);
 }
+
+// Functions, return and passing
+function greet(user) {
+    return `Hello, ${user}`;
+}
+
+let user = 'Alexey';
+console.log(greet(user));
+
+// Function expression -> function is evaluated and then is assigned to a variable, and 
+// now this valiable can be treated as a function
+
+let add = function(num1, num2) {
+    return num1 + num2;
+}
+
+result = add(3, 7);
+console.log(result);
+
+// Deafault value passing to the function
+function adding(num1, num2 = 2) {
+    return num1 + num2;
+}
+
+result = adding(2, 3);
+console.log(result); // 5
+
+result = adding(2);
+console.log(result); // 4, the second value wasn't passed but there was a default value === 2
+
+
+// Arrow function
+
+let addingAgain = (num1, num2) => num1 + num2;
+
+
