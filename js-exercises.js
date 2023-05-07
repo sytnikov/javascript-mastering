@@ -312,4 +312,48 @@ console.log(result); // 4, the second value wasn't passed but there was a defaul
 
 let addingAgain = (num1, num2) => num1 + num2;
 
+// Methods - functions inside the objects
+// Objects possess data and behaviour
+let laptop = {
+    cpu : 'i9',
+    ram : 16,
+    brand : 'HP',
 
+    greet : function() {
+        console.log("Hello, world!");
+    },
+
+    compare : function(laptop) {
+        (this.cpu > laptop.cpu) ? console.log(this) : console.log(laptop);
+    },
+}
+
+laptop.greet(); // method greet of the object laptop
+
+// THIS key word -> refers to the current object
+let laptop1 = {
+    cpu : 'i7',
+    ram : 16,
+    brand : 'HP',
+
+    getConfig : function() {
+        console.log(this.cpu);
+    },
+}
+
+laptop1.getConfig();
+
+// To compare two objects you can use 
+// 1) a third party function OR
+// 2) create a method for an object -> THIS key word is going to be extremely helpful here
+
+// 1
+let getFastestMachine = (laptop1, laptop2) => {
+    (laptop1.cpu > laptop2.cpu) ? console.log(laptop1) : console.log(laptop2);
+}
+
+getFastestMachine(laptop, laptop1);
+
+// 2 -> let's create a compare method for the laptop object (see above)
+
+laptop.compare(laptop1);
