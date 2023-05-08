@@ -357,3 +357,37 @@ getFastestMachine(laptop, laptop1);
 // 2 -> let's create a compare method for the laptop object (see above)
 
 laptop.compare(laptop1);
+
+
+// Constructor function - allows to create the same object without difining all its properties
+// The difference in syntaxis is that a cinstruction function starts with a capital letter - Alien
+
+function Alien(name, tech) {
+    this.name = name;
+    this.tech = tech;
+}
+
+let alien2 = new Alien('Alexey', 'JS');
+let alien3 = new Alien('Sytnikov', 'Python');
+
+console.log(alien3);
+
+// changing the value pf the of the object property
+
+alien2.tech = 'Java';
+console.log(alien2);
+
+// adding a method to a constructor function
+
+function Alien1(name, tech) {
+    this.name = name;
+    this.tech = tech;
+
+    this.work = function() {
+        console.log('Search the bugs');
+    }
+}
+
+let alien4 = new Alien1('Balvin', 'Python');
+console.log(alien4);
+alien4.work();
