@@ -391,3 +391,120 @@ function Alien1(name, tech) {
 let alien4 = new Alien1('Balvin', 'Python');
 console.log(alien4);
 alien4.work();
+
+// Arrays - what if we need an object but we want to store only values without keys
+
+let values = new Array(); // constructor function
+let values1 = [5, 7, 9]; // another way to create an array
+
+console.log(values1);
+console.log(values1.length);
+
+// adding values to an array
+values.push(5);
+console.log(values);
+
+// fetching values - insted of keys like in objects there are indecies in arrays
+console.log(values1[2]);
+
+let names = ['Alexey', 'Iuliia', 'Timur'];
+console.log(names);
+
+// adding a value through indexing
+names[3] = 'Vasilisa';
+console.log(names);
+
+// array methods
+// pop - last added first to be removed
+let numbers = [5, 6, 4, 1];
+numbers.pop()
+console.log(numbers);
+
+// shift - removes the first element shifting all the other elements to the left
+numbers.shift();
+console.log(numbers);
+
+// unshift - adds an element at the bigenning od the array
+numbers.unshift(8);
+console.log(numbers);
+
+// splice - removes the elements, you set two parameters (2, 1), first - which index to start from,
+// second - how many elements to delete
+
+numbers.push(56);
+numbers.splice(1, 2);
+console.log(numbers);
+
+numbers.push(3, 7, 9)
+console.log(numbers);
+
+// for of loop - prints the values whereas for in loop prints the keys which are indecies in arrays
+let nums = [];
+nums[0] = 5;
+nums[99] = 9;
+//console.log(nums);
+for (let n of nums) {
+    console.log(n);
+}
+for (let key in nums) {
+    console.log(key);
+}
+
+// another way to fetch the values from an array using keys
+for (let key in nums) {
+    console.log(nums[key]);
+}
+
+// destructuring arrays
+nums = [5, 4, 6, 7];
+let [a, b, c, d] = nums;
+console.log('\n' + d);
+
+// swapping two values
+let f = 6;
+let e = 5;
+
+[f, e] = [e, f];
+console.log([f, e]);
+
+// splitting a string
+let words = 'My name is Alexey Sytnikov'.split(' ');
+let [t, m, , ...fullName] = words; // all the rest of the values are written in ...fullName valiable
+console.log(t, m, fullName);
+
+// forEach() method - takes every value of the array one by one
+nums = [42, 51, 24, 98, 65, 12];
+
+nums.forEach((n, i) => { // function in a function 
+    console.log(n, i); // this print a value and its index
+});
+
+// 42 0
+// 51 1
+// 24 2
+// 98 3
+// 65 4
+// 12 5
+
+// filter method
+
+nums.filter(n => n%2 ===0) // there's a fintering condition
+    .forEach(n => {
+    console.log(n);
+});
+
+// map method - changes the value in some way
+console.log();
+nums.filter(n => n%2 ===0)
+    .map(n => n * 2)
+    .forEach(n => console.log(n));
+
+// reduce method - returns only one value, for example, a sum of all the values in an array
+console.log();
+let results = nums.filter(n => n%2 ===0)
+                  .map(n => n * 2)
+                  .reduce((a, b) => a + b); // takes two values (previous and current) and sum'em up
+
+console.log(results);
+
+// SET data structure - a UNOREDERED (no indecies) collection of UNIQUE values
