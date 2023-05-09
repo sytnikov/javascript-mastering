@@ -1,0 +1,1 @@
+## This repository stores the files documenting JavaScript learning process
