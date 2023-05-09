@@ -22,3 +22,5 @@ let fact = (n) => {
 num = 7
 let result = fact(num);
 console.log(result);
+
+// some random text
